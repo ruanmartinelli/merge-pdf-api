@@ -4,7 +4,7 @@ RUN apk update \
   && apk upgrade \
   && apk add pdftk
 
-RUN mkdir _files
+RUN npm install pm2 -g
 
 ENV NODE_ENV production
 ENV PORT 3000
@@ -19,4 +19,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD node index.js
+CMD pm2-docker index.js
