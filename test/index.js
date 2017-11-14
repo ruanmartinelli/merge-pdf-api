@@ -17,6 +17,7 @@ test('must work', async t => {
   const { data, status } = await axios.post('/merge', files)
 
   t.is(status, 200)
+  t.is(typeof data, 'string')
 })
 
 test('must be an array', async t => {

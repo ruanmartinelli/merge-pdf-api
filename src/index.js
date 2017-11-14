@@ -66,7 +66,7 @@ app.post('/merge', async (req, res, next) => {
       files.forEach(f => fs.unlink(f.path, _.noop))
 
       res.status(200)
-      res.send({ output: data })
+      res.send(data)
     })
   } catch (err) {
     next(err)
