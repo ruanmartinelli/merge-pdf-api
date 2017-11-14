@@ -11,13 +11,20 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "execa": "^0.8.0",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
     "pdf-merge": "^1.0.2",
     "uuid": "^3.1.0"
   },
-  "keywords": ["merge", "pdf", "combine", "merge-pdf", "api"],
+  "keywords": [
+    "merge",
+    "pdf",
+    "combine",
+    "merge-pdf",
+    "api"
+  ],
   "scripts": {
     "dev": "nodemon index",
     "test": "ava --verbose"
@@ -27,6 +34,8 @@
   },
   "ava": {
     "babel": "inherit",
-    "require": ["babel-register"]
+    "require": [
+      "babel-register"
+    ]
   }
 }

@@ -4,6 +4,7 @@ import fs, { writeFileSync } from 'fs'
 import bodyParser from 'body-parser'
 import path from 'path'
 import { v4 } from 'uuid'
+import cors from 'cors'
 import _ from 'lodash'
 
 const app = express()
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3000
 
 app.set('port', PORT)
 
+app.use(cors())
 app.use(bodyParser.json({ limit: '50mb' }))
 
 app.get('/', (req, res) => {
